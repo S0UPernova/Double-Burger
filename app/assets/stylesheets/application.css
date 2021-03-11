@@ -1,0 +1,70 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.container {
+ 	background-color: lightgrey;
+ 	min-width: 300px;
+ 	width: 80%;
+ 	margin: auto;
+
+ }
+ p {
+ 	max-width: 70ch;
+ }
+.intro {
+	display: grid;
+	justify-content: center;
+}
+.intro h2 {
+	margin-top: 0px;
+}
+.burgers {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 5em 0;
+}
+.burgerCaption {
+	text-align: center;
+}
+#sci-div {
+	margin-right: 15em;
+}
+.sci-img {
+	width: 40vw;
+}
+#why {
+	display:flex;
+
+}
+.sci-text {
+	text-align: center;
+	font-size: 1.2rem;
+}
+.article {
+	font-size: 1.3rem;
+}
+.article section {
+	margin: 85px 20px;
+}
+@media screen and (max-width: 1000px) {
+	#why {display: block;}
+	.article { display: block;}
+	.sci-text {margin-top: 3rem;}
+	.sci-img {width: 100%}
+}
+@media screen and (max-width: 1000px) {
+	.burgers {display: block; margin-left: 20px;}
+	.burgerCaption {text-align: left; margin-left: 60px; }
