@@ -19,7 +19,6 @@
  	min-width: 300px;
  	width: 80%;
  	margin: auto;
-
  }
  p {
  	max-width: 70ch;
@@ -57,14 +56,15 @@
 	font-size: 1.3rem;
 }
 .article section {
-	margin: 85px 20px;
+	margin-right: 3rem;
+	margin-bottom: 5rem;
 }
 @media screen and (max-width: 1000px) {
 	#why {display: block;}
-	.article { display: block;}
-	.sci-text {margin-top: 3rem;}
+	.article { display: block; margin-right: 0;}
 	.sci-img {width: 100%}
 }
 @media screen and (max-width: 1000px) {
 	.burgers {display: block; margin-left: 20px;}
 	.burgerCaption {text-align: left; margin-left: 60px; }
+}

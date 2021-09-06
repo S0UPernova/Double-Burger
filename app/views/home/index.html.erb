@@ -3,17 +3,18 @@
 		<h1>Introducing the double burger</h1>
 		<h2>It's not two patties, it's two burgers stacked</h2>
 	</div>
-</header>
 <div class="burgers">
 	<figure>
 		<figcaption class="burgerCaption"><h3>Their Burger</h3></figcaption>
-		<%= image_tag "theirBurger.svg" %>
+		<%= image_tag "theirBurger.svg", alt: "A regular double with 2 patties" %>
 	</figure>
 	<figure>
 		<figcaption class="burgerCaption"><h3>Our Burger</h3></figcaption>
-		<%= image_tag "ourBurger.svg" %>
+		<%= image_tag "ourBurger.svg", alt: "Our double with 2 burgers, with one stacked on the other" %>
 	</figure>
 </div>
+<br>
+</header>
 <hr>
 <div id="why">
 	<article class="article">
@@ -47,7 +48,7 @@
 			<h3>Our science team confirms that this is the single best way to enjoy a burger.</h3>
 		</figcaption>
 		<figure>
-			<%= image_tag 'science_team.png', class:"sci-img" %>
+			<%= image_tag 'science_team.png', alt: "scientist in a lab, giving a thumbs up", class:"sci-img" %>
 		</figure>
 	</aside>
 </div><hr>
