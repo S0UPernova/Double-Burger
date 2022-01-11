@@ -11,9 +11,10 @@
   * It is generally better to create a new file per style scope.
   *
 */
- @import 'bootstrap/scss/bootstrap';
 
- .navbar-toggler {
+@import 'bootstrap/scss/bootstrap';
+
+.navbar-toggler {
   width: 10%;
   padding: .2rem;
   margin-bottom: .5rem;
