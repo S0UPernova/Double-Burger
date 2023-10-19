@@ -10,8 +10,12 @@ module Double
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
-    config.relative_url_root = "/rails"
-    config.action_controller.relative_url_root = '/rails'
+    config.relative_url_root = ENV["RAILS_RELATIVE_URL_ROOT"]
+    config.action_controller.relative_url_root = ENV["RAILS_RELATIVE_URL_ROOT"]
+    config.assets.prefix = ENV["RAILS_RELATIVE_URL_ROOT"]
+
+    # master_key = ENV['RAILS_MASTER_KEY']
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

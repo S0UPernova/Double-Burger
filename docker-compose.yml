@@ -9,16 +9,17 @@ services:
       - postgres:/var/lib/postgresql/data
   web:
     build: .
-    command: bash | 
-      'RAILS_RELATIVE_URL_ROOT="/rails" '
-      "rm -f tmp/pids/server.pid"
-      "rails server"
+    command: bash -c "rm -f tmp/pids/server.pid && EDITOR="mate" bin/rails credentials:edit && RAILS_RELATIVE_URL_ROOT="/rails" && rails assets:precompile && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/Rails-Docker
+    environment:
+      RAILS_ENV: production
+      RAILS_RELATIVE_URL_ROOT: /rails
+      RAILS_SERVE_STATIC_FILES: true
+      RAILS_MASTER_KEY: 
     ports:
       - "3000:3000"
     depends_on:
       - db
 volumes:
   postgres:
-
