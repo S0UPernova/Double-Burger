@@ -9,12 +9,15 @@ services:
       - postgres:/var/lib/postgresql/data
   web:
     build: .
-    command: bash |
-      "-c"
-      "chmod u+x bin/rails"
-      "rm -f tmp/pids/server.pid"
-      "bundle exec rails assets:precompile"
-      "bundle exec rails s -p 3000 -b '0.0.0.0'"
+    command: 
+      - sh 
+      - -c
+      - |
+        EDITOR=echo rails credentials:edit
+        chmod u+x bin/rails
+        rm -f tmp/pids/server.pid
+        rails assets:precompile
+        rails s -p 3000
     volumes:
       - .:/Rails-Docker
     environment:
